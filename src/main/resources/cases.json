@@ -1,0 +1,179 @@
+{
+"AddJobPost": {
+        "request": {
+            "url": "/job/AddJobPost",
+            "headers": {
+               
+            },
+            "body": {
+                "jobPostId": "5badf59c727b1939db9874f8",
+   	            "job_role": "system operator",
+	            "job_title": "Financial system operator",
+	            "job_type":"Full Time",
+	            "exp_req": "2",
+	            "job_description": "Java Developer with skills Core Java, Spring, Hybernate",
+	            "sal_max": "500000",
+	            "sal_min": "600000",
+	            "listOfLocationsIds": [
+      		        "5bae0062727b194679f5c64y",
+      		        "5bae00cb727b19473ece038u"
+   	                ],   
+  	            "listOfJobSkillsIds": [
+    	        "5bae0062727b194679f5c64c",
+     		    "5bae00cb727b19473ece038f"
+    	         ]
+               },
+               "method": "POST"
+           },
+          "response": {
+             "status": "OK",
+             "headers": {
+               
+             },
+             "body": {
+                "status": 200,
+                "message": "job added successfully"
+            }
+        }
+},
+
+"AddJobSkills": {
+       "request": {
+            "url": "/job/AddJobSkills?jobPostId=5badf59c727b1939db9874f8",
+            "headers": {
+               
+            },
+             "body": {
+             "jobSkillId": "5bae0a02727b194f58cea005",
+             "skillName": "html"
+             },
+              "method": "POST"
+           },
+          "response": {
+             "status": "OK",
+             "headers": {
+               
+             },
+             "body": {
+                "status": 200,
+                "message": "job skills added successfully"
+            }
+        }
+             
+  },
+  "AddJobLocation": {
+        "request": {
+            "url": "/job/AddJobLocation?jobPostId=5badf59c727b1939db9874f8",
+            "headers": {
+               
+            },
+            "body": {
+                 "jobLoclId": "5bae0a02727b194f58cea005",
+                 "locationName": "Pune"
+               },
+               "method": "POST"
+           },
+          "response": {
+             "status": "OK",
+             "headers": {
+               
+             },
+             "body": {
+                "status": 200,
+                "message": "job locations added successfully"
+            }
+        }
+},
+"JobRoleString": {
+        "request": {
+            "url": "/job/AddJobPost",
+            "headers": {
+               
+            },
+            "body": {
+                 "jobPostId": "5badf59c727b1939db9874f8",
+   	            "job_role": " ",
+	            "job_title": "Financial system operator",
+	            "job_type":"Full Time",
+	            "exp_req": "2",
+	            "job_description": "Java Developer with skills Core Java, Spring, Hybernate",
+	            "sal_max": "500000",
+	            "sal_min": "600000",
+	            "listOfLocationsIds": [
+      		        "5bae0062727b194679f5c64y",
+      		        "5bae00cb727b19473ece038u"
+   	                ],   
+  	            "listOfJobSkillsIds": [
+    	        "5bae0062727b194679f5c64c",
+     		    "5bae00cb727b19473ece038f"
+    	         ]
+               },
+               "method": "POST"
+           },
+          "response": {
+             "status": "BAD_REQUEST",
+             "headers": {
+               
+             },
+             "body": {
+                "status": 409,
+                "message": "job role must be String not any digits"
+            }
+        }
+},
+"JobExp_req": {
+        "request": {
+            "url": "/job/AddJobPost",
+            "headers": {
+               
+            },
+            "body": {
+                "jobPostId": "5badf59c727b1939db9874f8",
+   	            "job_role": "system operator",
+	            "job_title": "Financial system operator",
+	            "job_type":"Full Time",
+	            "exp_req": "ar",
+	            "job_description": "Java Developer with skills Core Java, Spring, Hybernate",
+	            "sal_max": "500000",
+	            "sal_min": "600000",
+	            "listOfLocationsIds": [
+      		        "5bae0062727b194679f5c64y",
+      		        "5bae00cb727b19473ece038u"
+   	                ],   
+  	            "listOfJobSkillsIds": [
+    	        "5bae0062727b194679f5c64c",
+     		    "5bae00cb727b19473ece038f"
+    	         ]
+               },
+               "method": "POST"
+           },
+          "response": {
+             "status": "OK",
+             "headers": {
+               
+             },
+             "body": {
+                "status": 409,
+                "message": "experience required should be in number of years and should be less than 5 years"
+            }
+        }
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
